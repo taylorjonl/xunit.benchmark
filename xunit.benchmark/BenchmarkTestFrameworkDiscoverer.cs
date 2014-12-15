@@ -24,8 +24,7 @@ namespace Microsoft.Xunit
             return new TestClass(testCollectionFactory.Get(@class), @class);
         }
 
-        //protected override bool FindTestsForType(ITestClass testClass, bool includeSourceInformation, IMessageBus messageBus, ITestFrameworkOptions discoveryOptions)
-        protected override bool FindTestsForType(ITestClass testClass, bool includeSourceInformation, IMessageBus messageBus)
+        protected override bool FindTestsForType(ITestClass testClass, bool includeSourceInformation, IMessageBus messageBus, ITestFrameworkOptions discoveryOptions)
         {
             foreach (var method in testClass.Class.GetMethods(false))
             {
